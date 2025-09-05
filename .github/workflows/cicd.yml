@@ -13,9 +13,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3.3.0
-      - uses: Roblox/setup-foreman@v3.1.0
+      - uses: Roblox/setup-foreman@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          # github-api-url: "https://api.github.com"
       - name: Cache Foreman tools
         uses: actions/cache@v4.2.4
         with:
